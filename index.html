@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: cursive;
+    }
+    span{
+        color: gray;
+        font-size: 30px;
+    }
+    header{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .nav a{
+        text-decoration: none;
+        margin: 1%;
+        font-size: 25px;
+        
+
+    }
+    .nav {
+        width: 40%;
+        /*border: 1px solid red;*/
+    }
+    #info{
+        display: flex;
+        justify-content: space-around;
+       /* border: 1px solid red;*/
+        margin: 5%;
+        height: 4%;
+        
+    }
+    .img-container-img{
+        width: 450px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    .img container{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .info-text{
+        border: 1px solid red;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        width: 30%;
+    }
+    .links a{
+        border:  1px solid skyblue;
+        margin: 1%;
+        border-radius: 10px;
+        padding: 2%;
+        text-decoration: none;
+        
+    }
+    .links{
+      /*  border: 1px solid;*/
+        width: 45%;
+        align-items: center;
+        display: flex;
+        margin: 2%;
+    }
+    .logos img{
+        width: 50px;
+        margin: 3%;
+    }
+    .logos{
+width: 25px;
+display: flex;
+align-items: center;
+    }
+    .headings{
+        text-align: center;
+    }
+    .boxes{
+        display: flex;
+        justify-content: center;
+    }
+    .box{
+        border: 1px solid black;
+        display :flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 3%;
+        border-radius: 20%;
+        padding: 2%;
+        align-items: center;
+    }
+    .paragraphs{
+        margin: 4%;
+    }
+    .grid-box img{
+        width: 50px;
+
+    }
+    .grid-box{
+        display: flex;
+    }
+    .grid-box span{
+        font-size: 15px;
+    }
+    .grid-view{
+        display: grid;
+        grid-template-columns: 25% 25%;
+        gap: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>
+        Ravindra rathod
+    </h1>
+    <div class="menu">
+        <nav class="navigation">
+            <a href="">About</a>
+            <a href="">Expeirnce</a>
+            <a href="">projects</a>
+            <a href="">contacts</a>
+            <a href="">certificates</a>
+        </nav>
+    </header>
+    
+    <section id="info">
+        <div class="img-container">
+            <img src="data:image/png;base64,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">
+
+        </div>
+        <div class="info-text">
+            <span>Hello I,m</span>
+            <h1>Ravindhra  Rathod</h1>
+            <span>Software Developer</span>
+            <div class="links">
+                <a href="See resume"></a>
+                <a href="contact info"></a>
+            </div>
+            <div class="logos">
+                <img src="data:image/png;base64,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">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhITERIWFRAVFRUWFxYRFhUYFRAYFREaFxcSFhMYHCghGR4lGxYVITEiJSkrLi4uFx8zODMtNygtLi0BCgoKDQ0ODw8PDysZFRkrKysrKy0rKys3KystKy0tLSsrKystKys3KystKysrKystKysrKysrKysrKy0rKystK//AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABwgBBQYEAgP/xABJEAABAwICBwQECQkGBwAAAAABAAIDBBEFIQYHEjFBUXETImGBQnKRoQgUIzJic4KisSQzNVJTsrPBwkOSk6PD4RUlVGN0g4T/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREx/9oADAMBAAIRAxEAPwCcUREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBF8yPABJIAGZJyA81yuK6yMLp7h9ZG5w3thvK4HlaMHNB1iKLKzXnQN/NwVEnjsxsHvdf3LUS6/Bfu4cSObqkA+wRH8VcE1IoVj1+Z97DiBzbUgn2GIfittR686B352Coj8bMePc6/uTBKiLk8J1j4XUWDKyNrjkGzXiJO61pAM7rqo3ggEEEHcRmD0Kg+kREBERAREQEREBERAREQEREBERARYJUfaw9Z8FBtQw2mrbfNv3IMsjKRx47Az6b0HaYvjEFLGZamVsUY9J5tc8gN5PgFEGlOu83LMOhFv21QDn4thH4uPkopx7HKisl7WqldJJwvk2MfqsaMmjotctSJraY5pDV1jtqqqJJc7hrz3G+rGLNHsWrCIqgiIgIiIoVs8D0hq6M3paiSLO5aw9x3rRm7T7FrEREz6La8DcMxGEW/bU43eLoT+LT5KX8IxiCqjEtNK2WM+kw3seRHA+BzVOVssBx2oo5RLSyujfle2bZAPRew5OHVTF1cJFHurvWhBX7MM9oa3g2/cn8YieP0Tn1Ug3WVZREQEREBERAREQEREBYKyo01w6fGij+K0zvyyVty4HOmjOW165ztysTyuGs1r6zzAX0dC75cZSzg/mOcbPp8z6Pid0FON7km5OZJzJJNySeJWEW8QReqmw6eQF0UMsjRkXRxveAeRLR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">
+            </div>
+
+        </div>
+        
+    </section>
+    <section id="about">
+        <div class="headings">
+            <span>Get to know more</span>
+            <h1>About me</h1>
+            <div class="boxes">
+                <div class="box">
+                    <h3>Educational Experiences</h3>
+                    <span>Frntend/backend Developmnent</span>
+
+                </div>
+            <div class="box">
+                <h3>Educational</h3>
+                <span>Masters computer applications</span>
+            </div>
+            </div>
+            <div class="paragraphs">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima itaque inventore accusamus, consequatur, possimus quasi voluptatibus facilis asperiores porro ipsa iure. Exercitationem eum qui numquam laudantium sapiente facilis beatae culpa?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem inventore ipsum quasi, fugit beatae dicta voluptatem nostrum, quisquam cumque assumenda nihil deserunt ut! Quidem suscipit similique eveniet accusantium aspernatur.
+                </p>
+        </div>
+    </section>
+    
+                    <span>Flutter Ui</span>
+                    <div class="grid-box">
+                        <img src="">
+                    </div>
+                    <span>Flutter Ui</span>
+                    <div class="grid-box">
+                        <img src="">
+                </div>
+                <span>Flutter Ui</span>
+                    <div class="grid-box">
+                        <img src="">
+            </div>
+            <span>Flutter Ui</span>
+                    <div class="grid-box">
+                        <img src="">
+                    </div>
+                </div>
+            
+        </div>
+        <h3>Backend Development</h3>
+        <div class="grid-view">
+            <div class="grid-box">
+                <img src="">
+                <span>Flutter ui</span>
+            </div>
+                <div class="grid-box">
+                    <img src="">
+                
+                <span>Flutter ui</span>
+                </div>
+                <div class="grid-box">
+                    <img src="">
+                
+                <span>Flutter ui</span>
+                </div>
+                <div class="grid-box">
+                    <img src="">
+            
+            <span>Flutter ui</span>
+                </div>
+                <div class="grid-box">
+                    <img src="">
+        
+        <span>Flutter ui</span>
+                </div>
+        
+                <div class="grid-box">
+                    <img src="">
+            
+                <span>Flutter ui</span>
+                </div>
+                <div class="grid-box">
+                    <img src="">
+                
+                <span>Flutter ui</span>
+                </div>
+                <div class="grid-box">
+                    <img src="">
+                <span>flutter ui</span>
+                </div>
+        </div>
+        </div>
+    </section>
+
+           
+    
+<section id="Experience">
+        <div class="headings">
+            <span>Explore My</span>
+            <h1>Experience</h1>
+        </div>
+        <div class="boxes">
+            <div class="box">
+                <h3>Frontend Development</h3>
+                <div class="griew-view">
+                    <div class="grid-box">
+                        <img src="">
+                        <span>Flutter UI</span>
+                    </div>
+                    <div class="grid-box">
+                        <img src="">
+                    </div>
+    
+    
+</body>
+</html>
